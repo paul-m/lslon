@@ -1,4 +1,5 @@
 <?php
+namespace paul-m\lslon;
 
 // lslon.inc
 // by Paul Mitchum

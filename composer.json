@@ -1,5 +1,5 @@
 {
-    "name": "paul-m/lslon",
+    "name": "paulm/lslon",
     "type": "library",
     "description": "Data interchange format for LSL.",
     "authors": [
@@ -15,7 +15,7 @@
       "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-      "psr-0": { "paul-m": [
+      "psr-0": { "PaulM": [
         "Src/",
         "Test/"
       ] }

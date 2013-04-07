@@ -1,0 +1,15 @@
+<phpunit bootstrap="Test/test_bootstrap.php"
+         colors="true"
+         verbose="true"
+    >
+    <testsuites>
+        <testsuite name="LSLON Test Suite">
+            <directory>Test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+      <whitelist>
+        <directory>Src</directory>
+      </whitelist>
+    </filter>
+</phpunit>
