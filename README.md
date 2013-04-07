@@ -1,3 +1,7 @@
+Note that this project is completely not ready for prime time. :-)
+
+If you have ideas, please file an issue. Thanks.
+
 What is LSLON?
 --------------
 
