@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/paul-m/lslon.png?branch=master)](https://travis-ci.org/paul-m/lslon)
+
 What is LSLON?
 --------------
 
