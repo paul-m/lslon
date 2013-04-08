@@ -4,23 +4,39 @@ namespace PaulM\LSLON;
 use PaulM\LSLON\ArrayToLSLONConverter;
 
 /**
- * @todo: test for good complex conversions.
+ * @todo: add more tests for complex conversions.
  */
 
 class ArrayToLSLONConverterTest extends \PHPUnit_Framework_TestCase {
 
-  public function testConversion() {
-    $converter = new ArrayToLSLONConverter(array());
-    $this->assertEquals($converter->getLslon(), 'LSLON 1.0');
-    $converter->setData(array('foo' => 'bar'));
-    $this->assertEquals($converter->getLslon(), "LSLON 1.0\nfoo=bar");
+  public function goodInputProvider() {
+    return array(
+      array(
+        array('name'=>'value'),
+        FALSE,
+        "LSLON 1.0\nname=value",
+      ),
+      array(
+        array('name'=>'value'),
+        TRUE,
+        "LSLON 1.0\nname=TYPED|3|value",
+      ),
+    );
+  }
+
+  /**
+   * @dataProvider goodInputProvider
+   */
+  public function testConversion(array $array, $typed, $expected) {
+    $converter = new ArrayToLSLONConverter($array);
+    $this->assertEquals($converter->getLslon($typed), $expected);
   }
   
   public function badInputProvider() {
     return array(
-      array(array(array())),
-      array(array(new \stdClass())),
-      array(array(NULL)),
+      array(array('name'=>array())),
+      array(array('name'=>new \stdClass())),
+      array(array('name'=>NULL)),
     );
   }
   

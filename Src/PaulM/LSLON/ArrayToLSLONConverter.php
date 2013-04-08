@@ -62,7 +62,7 @@ TYPE_INVALID	0	none
             break;
 
           default:
-            throw new \InvalidArgumentException('LSLON can only encode bool, int, float, string types.');
+            throw new \InvalidArgumentException('LSLON can only encode boolean, integer, double, and string types.');
         }
         $lslonArray[] = urlencode($name) . '=' . implode('|', $valueArray);
       }
