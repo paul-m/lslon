@@ -22,6 +22,23 @@ It also contains an LSLON generator in PHP. More PHP code forthcoming.
 
 The PHP code is useful, while the LSL code is meant to demonstrate how the format works, and should be re-implemented for use-cases.
 
+How do I run the tests?
+-----------------------
+
+The tests are written in PHPUnit. If you want to run them, you have to satisfy the dependencies, using Composer. (You can see some of how this works in the `.travis.yml` file.)
+
+From the command line, first installing composer and grabbing the dependencies:
+
+	cd lslon 	# cd to the project root
+	curl -s https://getcomposer.org/installer | php
+	./composer.phar update
+
+Then we run the test:
+
+	./vendor/bin/phpunit
+
+You can see the most recent test build on Travis-CI here: https://travis-ci.org/paul-m/lslon
+
 Want to participate?
 --------------------
 
