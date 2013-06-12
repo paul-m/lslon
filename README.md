@@ -1,5 +1,14 @@
 [![Build Status](https://travis-ci.org/paul-m/lslon.png?branch=master)](https://travis-ci.org/paul-m/lslon)
 
+Important Note
+--------------
+
+It seems LSL now has native JSON parsing, through a JSONpath-like system. Read all about it here:
+
+http://wiki.secondlife.com/wiki/Json_usage_in_LSL
+
+This basically makes this project obsolete. Thanks, Linden Lab! :-)
+
 What is LSLON?
 --------------
 
